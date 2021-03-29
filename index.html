@@ -13,8 +13,68 @@
     <!-- 头部的盒子 -->
     <header>
         <h1>数据可视化-Echarts</h1>
+        <div class="showTime"></div>
     </header>
-    <!-- <div class="box"></div> -->
+
+    <!-- // 格式： 当前时间：2020年3月17-0时54分14秒 -->
+    <script>
+        var t = null;
+        t = setTimeout(time, 1000); //開始运行
+        function time() {
+            clearTimeout(t); //清除定时器
+            dt = new Date();
+            var y = dt.getFullYear();
+            var mt = dt.getMonth() + 1;
+            var day = dt.getDate();
+            var h = dt.getHours(); //获取时
+            var m = dt.getMinutes(); //获取分
+            var s = dt.getSeconds(); //获取秒
+            document.querySelector(".showTime").innerHTML = '当前时间：' + y + "年" + (mt < 10 ? '0' + mt : mt) + "月" +
+                (day < 10 ? '0' + day : day) + "日 - " + (h < 10 ? '0' + h : h) + ":" + (m < 10 ? '0' + m : m) +
+                ":" + (s < 10 ? '0' + s : s);
+            t = setTimeout(time, 1000); //设定定时器，循环运行     
+        }
+    </script>
+    <!-- 页面主体盒子 -->
+    <div class="mainbox">
+        <div class="colum">
+            <div class="panel bar">
+                <h2>柱形图-就业行业</h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line">
+                <h2>柱形图-就业行业</h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie">
+                <h2>柱形图-就业行业</h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+        <div class="colum">
+
+        </div>
+        <div class="colum">
+            <div class="panel bar">
+                <h2>柱形图-就业行业</h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line">
+                <h2>柱形图-就业行业</h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie">
+                <h2>柱形图-就业行业</h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </div>
     <script src="js/flexible.js"></script>
 </body>
 

@@ -4,6 +4,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+li {
+  list-style: none;
+}
+/* 声明字体*/
+@font-face {
+  font-family: electronicFont;
+  src: url(../font/DS-DIGIT.TTF);
+}
 body {
   background: url('../images/bg.jpg') no-repeat top center;
   line-height: 1.15;
@@ -39,6 +47,7 @@ header .showTime {
 }
 .mainbox .colum:nth-child(2) {
   flex: 5;
+  margin: 0 0.125rem 0.1875rem;
 }
 .mainbox .panel {
   position: relative;
@@ -104,4 +113,123 @@ header .showTime {
 .mainbox .panel .chart {
   height: 3rem;
   background-color: pink;
+}
+.mainbox .no {
+  background: rgba(101, 132, 226, 0.1);
+  padding: 0.1875rem;
+}
+.mainbox .no .no-hd {
+  border: 1px solid rgba(25, 186, 139, 0.17);
+}
+.mainbox .no .no-hd ul {
+  display: flex;
+  position: relative;
+}
+.mainbox .no .no-hd ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 10px;
+  border-top: 2px solid #02a6b5;
+  border-left: 2px solid #02a6b5;
+}
+.mainbox .no .no-hd ul::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 10px;
+  border-bottom: 2px solid #02a6b5;
+  border-right: 2px solid #02a6b5;
+}
+.mainbox .no .no-hd ul li {
+  position: relative;
+  flex: 1;
+  height: 1rem;
+  line-height: 1rem;
+  font-size: 0.875rem;
+  color: #ffeb7b;
+  padding: 0 0.05rem 0;
+  text-align: center;
+  font-family: 'electronicFont';
+  font-weight: 700;
+}
+.mainbox .no .no-hd ul li:first-child:after {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  height: 50%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.mainbox .no .no-bd ul {
+  display: flex;
+}
+.mainbox .no .no-bd ul li {
+  flex: 1;
+  font-size: 0.225rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  padding-top: 0.125rem;
+}
+.mainbox .map {
+  height: 10.125rem;
+  position: relative;
+}
+.mainbox .map .chart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10.125rem;
+}
+.mainbox .map .map1,
+.mainbox .map .map2,
+.mainbox .map .map3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6.475rem;
+  height: 6.475rem;
+  transform: translate(-50%, -50%);
+  background: url(../images/map.png);
+  background-size: 100% 100%;
+  opacity: 0.3;
+}
+.mainbox .map .map2 {
+  width: 8.0375rem;
+  height: 8.0375rem;
+  background: url(../images/lbx.png);
+  opacity: 0.6;
+  animation: rotate 15s linear infinite;
+  background-size: 100% 100%;
+  z-index: 2;
+}
+.mainbox .map .map3 {
+  width: 7.075rem;
+  height: 7.075rem;
+  background: url(../images/jt.png);
+  background-size: 100% 100%;
+  animation: rotate2 15s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes rotate2 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
 }

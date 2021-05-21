@@ -18,6 +18,9 @@ li {
 body {
     background: url('../images/bg.jpg') no-repeat top center;
     line-height: 1.15;
+    min-width: 1024px;
+    max-width: 1920px;
+    background-size: 100% 100%;
 }
 
 header {
@@ -48,6 +51,7 @@ header {
     margin: 0 auto;
     padding: .125rem .125rem 0;
     display: flex;
+    // background-size: 100% 100%;
 
     .colum {
         flex: 3;
@@ -125,6 +129,16 @@ header {
             text-align: center;
             color: #fff;
             font-size: .25rem;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 .125rem;
+
+                &:hover {
+                    color: blue;
+                }
+            }
         }
 
         .chart {
@@ -216,6 +230,7 @@ header {
             position: absolute;
             top: 0;
             left: 0;
+            z-index: 5;
             // background-color: pink;
             width: 100%;
             height: 10.125rem;
@@ -230,7 +245,7 @@ header {
             width: 6.475rem;
             height: 6.475rem;
             transform: translate(-50%, -50%);
-            background: url(../images/map.png);
+            background: url(../images/map.png) no-repeat;
             background-size: 100% 100%;
             opacity: .3;
         }
